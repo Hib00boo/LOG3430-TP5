@@ -28,11 +28,11 @@ class SimpleTasks(TaskSet):
         self.client.post("/echo", json=payload)
 
 class SimpleUser(HttpUser):
-    weight = 0.02
+    # weight = 0.02
     tasks = [SimpleTasks]
     wait_time = between(1, 5)  # Simulate a wait time between requests
 
-class HeavyUser(HttpUser):
-    weight = 0.98
-    tasks = [SimpleTasks]
-    wait_time = between(5, 10)
+# class HeavyUser(HttpUser):
+#     weight = 0.98
+#     tasks = [SimpleTasks]
+#     wait_time = between(5, 10)
