@@ -29,4 +29,4 @@ jobs:
           sleep 30
 
       - name: Start locust server
-        run: locust --headless -u 10000 -r 100 --run-time 2m http://127.0.0.1:5000
+        run: locust --headless -u 10000 -r 100 --run-time 2m -H http://127.0.0.1:5000
